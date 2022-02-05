@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
+  resources :exhibits
   resources :staffs
   resources :hunts
-  resources :exhibits
   resources :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

@@ -4,14 +4,8 @@ one:
   name: MyString
   intro: MyString
   treasure: false
-  horizontal: 1
-  vertical: 1
-  map: one
 
 two:
   name: MyString
   intro: MyString
   treasure: false
-  horizontal: 1
-  vertical: 1
-  map: two
