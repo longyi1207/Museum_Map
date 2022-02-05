@@ -1,14 +1,14 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Exhibits</h1>
+<h1>Users</h1>
 
-<div id="exhibits">
-  <% @exhibits.each do |exhibit| %>
-    <%= render exhibit %>
+<div id="users">
+  <% @users.each do |user| %>
+    <%= render user %>
     <p>
-      <%= link_to "Show this exhibit", exhibit %>
+      <%= link_to "Show this user", user %>
     </p>
   <% end %>
 </div>
 
-<%= link_to "New exhibit", new_exhibit_path %>
+<%= link_to "New user", new_user_path %>

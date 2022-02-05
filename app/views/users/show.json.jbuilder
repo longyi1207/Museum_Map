@@ -1,1 +1,1 @@
-json.partial! "exhibits/exhibit", exhibit: @exhibit
+json.partial! "users/user", user: @user

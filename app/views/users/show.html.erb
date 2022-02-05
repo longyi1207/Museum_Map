@@ -1,10 +1,10 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @exhibit %>
+<%= render @user %>
 
 <div>
-  <%= link_to "Edit this exhibit", edit_exhibit_path(@exhibit) %> |
-  <%= link_to "Back to exhibits", exhibits_path %>
+  <%= link_to "Edit this user", edit_user_path(@user) %> |
+  <%= link_to "Back to users", users_path %>
 
-  <%= button_to "Destroy this exhibit", @exhibit, method: :delete %>
+  <%= button_to "Destroy this user", @user, method: :delete %>
 </div>

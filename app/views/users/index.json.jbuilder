@@ -1,1 +1,1 @@
-json.array! @exhibits, partial: "exhibits/exhibit", as: :exhibit
+json.array! @users, partial: "users/user", as: :user
