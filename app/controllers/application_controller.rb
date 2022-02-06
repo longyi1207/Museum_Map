@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   include ApplicationHelper
   include UserSessionHelper
+  include StaffsSessionHelper
   def destroy_session
     log_out
     redirect_to '/'
@@ -10,7 +11,7 @@ class ApplicationController < ActionController::Base
     if logged_in?
       redirect_to current_user
     else
-      redirect_to '/login'
+      redirect_to '/user/login'
     end
   end
 end
