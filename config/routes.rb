@@ -16,5 +16,9 @@ Rails.application.routes.draw do
   # post   '/admin',   to: 'staff_session#create'
   get    '/admin',   to: 'staffs#new'
 
-  get     '/scan/:id', to: 'patients#show'
+  # get     '/scanHunt/:id', to: ''
+
+  # post    '/newHunt', to:
+
+
 end
