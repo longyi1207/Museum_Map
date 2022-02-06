@@ -11,5 +11,13 @@ Rails.application.routes.draw do
   root 'application#home'
   get    '/login',   to: 'user_session#new'
   post   '/login',   to: 'user_session#create'
+  delete '/logout',  to: 'user_session#destroy'
+
+  # get    '/admin',   to: 'staff_session#new'
+  # post   '/admin',   to: 'staff_session#create'
+  get    '/admin',   to: 'staffs#new'
+
+  get     '/scan/:id', to: 'patients#show'
+
   get '/logout', to: 'application#destroy_session'
 end
