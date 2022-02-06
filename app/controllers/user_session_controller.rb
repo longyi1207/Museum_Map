@@ -14,7 +14,7 @@ class UserSessionController < ApplicationController
     end
     if user
       params[:user_session][:user_id] = user.id
-      redirect_to '/'
+      redirect_to "https://charles-river-museum.webflow.io/", allow_other_host: true 
     else
       flash.now[:danger] = 'Invalid'
       render 'new'
