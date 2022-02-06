@@ -1,10 +1,52 @@
-<p style="color: green"><%= notice %></p>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Exhibit 01 </title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    </head>
 
-<%= render @exhibit %>
+    <body>    
+        <br>
+        <div class="jumbotron">
+                <div class="container" style="text-align: center;">
+                <h1><%= @exhibit.name%></h1>
+            </div>
+        </div>
 
-<div>
-  <%= link_to "Edit this exhibit", edit_exhibit_path(@exhibit) %> |
-  <%= link_to "Back to exhibits", exhibits_path %>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <img src="https://mail.google.com/mail/u/0?ui=2&ik=cec2db1fe0&attid=0.3&permmsgid=msg-f:1723974342859995276&th=17ecc987e40eb88c&view=fimg&fur=ip&sz=s0-l75-ft&attbid=ANGjdJ9eqoqMHskbk9w2em1s09bKpgDBrh-biRnPnSESRjDcF5Tqs4vP5OvJ71gLmymono_WWVecGchqd3JsAaIycxG25OyyNPN99vfrFJnmMkTy3U240PVB9Oqxb0A&disp=emb&realattid=ii_kzakloh12" class="img-responsive" alt="Responsive image" style="height: 200px;">
+                </div>
+                <div class="col-sm-8">
+                    <p style="font-size: large;">Come and Meet My Friend!</p>
+                    <%= @exhibit.intro%>
+                </div>
+            </div>
+        </div>
+        <br>
+        
+        <% if @exhibit.treasure%>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8">
+                    <p style="font-size: large; color: green">Congratulations! You have just found a magic egg!</p>
+                </div>
+            </div>
+        </div>
+        <% if !logged_in?%>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8">
+                    <p style="font-size: large; color: red"><%= link_to "Subscribe", user_login_path%> now to get the egg!</p>
+                </div>
+            </div>
+        </div>
+        <% end%>
+        <%end %>
+    </body>
 
-  <%= button_to "Destroy this exhibit", @exhibit, method: :delete %>
-</div>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+</html>

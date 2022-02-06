@@ -1,7 +1,39 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @user %>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Exhibit 01 </title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    </head>
 
-<div>
-  <a href="https://charles-river-museum.webflow.io/">Click Here to Start the Game!</a>
+    <body>    
+        <br>
+        <div class="jumbotron">
+                <div class="container" style="text-align: center;">
+                <h1>Welcome back <%=current_user.name%></h1>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <img src="https://mail.google.com/mail/u/0?ui=2&ik=cec2db1fe0&attid=0.3&permmsgid=msg-f:1723974342859995276&th=17ecc987e40eb88c&view=fimg&fur=ip&sz=s0-l75-ft&attbid=ANGjdJ9eqoqMHskbk9w2em1s09bKpgDBrh-biRnPnSESRjDcF5Tqs4vP5OvJ71gLmymono_WWVecGchqd3JsAaIycxG25OyyNPN99vfrFJnmMkTy3U240PVB9Oqxb0A&disp=emb&realattid=ii_kzakloh12" class="img-responsive" alt="Responsive image" style="height: 200px;">
+                </div>
+                <div class="col-sm-8">
+                    <p style="font-size: large;">You have found <%= Hunt.where(user_id:current_user.id).size%> eggs!</p>
+                    <p style="font-size: large;">3 eggs will win you a prize!</p>
+                    
+                </div>
+            </div>
+        </div>
+        <br>
+    </body>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+</html>
+<div class="container" style="text-align: center;">
+                <a href="https://charles-river-museum.webflow.io/">Click Here to Start the Game!</a>
 </div>

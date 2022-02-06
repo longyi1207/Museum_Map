@@ -8,6 +8,9 @@ class ExhibitsController < ApplicationController
 
   # GET /exhibits/1 or /exhibits/1.json
   def show
+    if @exhibit.treasure && current_user
+      Hunt.create(user_id: current_user.id, exhibit_id: @exhibit.id)
+    end
   end
 
   # GET /exhibits/new

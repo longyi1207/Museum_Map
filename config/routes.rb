@@ -8,17 +8,15 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  get    '/login',   to: 'user_session#new'
-  post   '/login',   to: 'user_session#create'
-  delete '/logout',  to: 'user_session#destroy'
 
-  # get    '/admin',   to: 'staff_session#new'
-  # post   '/admin',   to: 'staff_session#create'
-  get    '/admin',   to: 'staffs#new'
+  root 'application#home'
+  get    '/user/login',   to: 'user_session#new'
+  post   '/user/login',   to: 'user_session#create'
 
-  # get     '/scanHunt/:id', to: ''
 
-  # post    '/newHunt', to:
+  get    '/admin/login',   to: 'staff_session#new'
+  post   '/admin/login',   to: 'staff_session#create'
+  get    '/admin/signup',   to: 'staffs#new'
 
 
 end

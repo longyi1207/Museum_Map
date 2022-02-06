@@ -1,10 +1,16 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @staff %>
+<p style="color: green"><%= notice %></p>
 
-<div>
-  <%= link_to "Edit this Admin", edit_staff_path(@staff) %> |
-  <%= link_to "Back to users", staffs_path %>
+<h1>Exhibits</h1>
 
-  <%= button_to "Destroy this Admin", @staff, method: :delete %>
+<div id="exhibits">
+  <% Exhibit.all.each do |exhibit| %>
+    <%= render exhibit %>
+    <p>
+      <%= link_to "Show this exhibit", exhibit %>
+    </p>
+  <% end %>
 </div>
+
+<%= link_to "New exhibit", new_exhibit_path %>
