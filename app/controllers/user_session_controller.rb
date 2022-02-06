@@ -1,5 +1,8 @@
 class UserSessionController < ApplicationController
   def new
+    if logged_in?
+      redirect_to current_user
+    end
   end
 
   def create
