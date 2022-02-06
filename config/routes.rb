@@ -18,5 +18,6 @@ Rails.application.routes.draw do
   post   '/admin/login',   to: 'staff_session#create'
   get    '/admin/signup',   to: 'staffs#new'
 
+  get '/logout', to: 'application#destroy_session'
 
 end
