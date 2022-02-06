@@ -11,11 +11,15 @@
         <div class="container" style="text-align: center;">
             <div class="row">
                 <div class="col-sm-4">
-                    <img src="https://mail.google.com/mail/u/0?ui=2&ik=cec2db1fe0&attid=0.3&permmsgid=msg-f:1723974342859995276&th=17ecc987e40eb88c&view=fimg&fur=ip&sz=s0-l75-ft&attbid=ANGjdJ9eqoqMHskbk9w2em1s09bKpgDBrh-biRnPnSESRjDcF5Tqs4vP5OvJ71gLmymono_WWVecGchqd3JsAaIycxG25OyyNPN99vfrFJnmMkTy3U240PVB9Oqxb0A&disp=emb&realattid=ii_kzakloh12" class="img-responsive" alt="Responsive image" style="height: 200px;">
+                    <img src="https://github.com/SusanLiiii/Museum_Map/blob/main/app/assets/images/watch%20avatar.png?raw=true" class="img-responsive" alt="Responsive image" style="height: 200px;">
                 </div>
                 <div class="col-sm-8">
                     <p style="font-size: large;">Come and Meet My Friend!</p>
-                    <%= @exhibit.intro%>
+                    <p style="font-size: medium; color:black">Born: <%= @exhibit.born%></p>
+                    <p style="font-size: large; color:black">Age: <%= @exhibit.age%></p>
+                    <p style="font-size: large; color:black">Parent: <%= @exhibit.parent%></p>
+                    <p style="font-size: large; color:black">Honor: <%= @exhibit.honor%></p>
+                    <p style="font-size: large; color:black"><%= @exhibit.intro%></p>
                 </div>
             </div>
         </div>

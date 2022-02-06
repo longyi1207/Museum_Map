@@ -68,6 +68,6 @@ class ExhibitsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def exhibit_params
-      params.require(:exhibit).permit(:name, :intro, :treasure)
+      params.require(:exhibit).permit(:name, :intro, :treasure, :born, :age, :parent, :honor)
     end
 end
