@@ -71,6 +71,6 @@ test:
 #
 production:
   <<: *default
-  database: Museum_Map_production
-  username: Museum_Map
+  database: museum_map_production
+  username: museum_map
   password: <%= ENV['MUSEUM_MAP_DATABASE_PASSWORD'] %>
