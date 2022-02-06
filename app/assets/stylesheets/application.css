@@ -13,3 +13,32 @@
  *= require_tree .
  *= require_self
  */
+
+ HTML {
+    --color-header: #007ea9;
+    --color-text: #07495f;
+    --font-family: Verdana;
+    font-family: var(--font-family);
+    background-color: rgb(180, 224, 218);
+}
+
+body {
+    color: var(--color-text);
+  }
+
+h1 {
+    font-size: 200%;
+    color: var(--color-header);
+}
+
+button{
+    color:var(--color-text);
+}
+
+h2, h3 {
+    color: var(--color-header);
+}
+
+p {
+    color: var(--color-paragraph);
+}

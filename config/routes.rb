@@ -8,15 +8,15 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+
   root 'application#home'
   get    '/user/login',   to: 'user_session#new'
   post   '/user/login',   to: 'user_session#create'
+
 
   get    '/admin/login',   to: 'staff_session#new'
   post   '/admin/login',   to: 'staff_session#create'
   get    '/admin/signup',   to: 'staffs#new'
 
-  # get     '/scan/:id', to: 'patients#show'
 
-  get '/logout', to: 'application#destroy_session'
 end
