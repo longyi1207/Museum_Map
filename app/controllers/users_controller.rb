@@ -8,6 +8,9 @@ class UsersController < ApplicationController
 
   # GET /users/1 or /users/1.json
   def show
+    if !logged_in?
+      redirect_to '/user/login'
+    end
   end
 
   # GET /users/new
